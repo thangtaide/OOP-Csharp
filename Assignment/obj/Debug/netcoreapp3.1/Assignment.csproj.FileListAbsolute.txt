@@ -1,0 +1,13 @@
+D:\VTCA\OOP\Assignment\bin\Debug\netcoreapp3.1\Assignment.exe
+D:\VTCA\OOP\Assignment\bin\Debug\netcoreapp3.1\Assignment.deps.json
+D:\VTCA\OOP\Assignment\bin\Debug\netcoreapp3.1\Assignment.runtimeconfig.json
+D:\VTCA\OOP\Assignment\bin\Debug\netcoreapp3.1\Assignment.runtimeconfig.dev.json
+D:\VTCA\OOP\Assignment\bin\Debug\netcoreapp3.1\Assignment.dll
+D:\VTCA\OOP\Assignment\bin\Debug\netcoreapp3.1\Assignment.pdb
+D:\VTCA\OOP\Assignment\obj\Debug\netcoreapp3.1\Assignment.csprojAssemblyReference.cache
+D:\VTCA\OOP\Assignment\obj\Debug\netcoreapp3.1\Assignment.AssemblyInfoInputs.cache
+D:\VTCA\OOP\Assignment\obj\Debug\netcoreapp3.1\Assignment.AssemblyInfo.cs
+D:\VTCA\OOP\Assignment\obj\Debug\netcoreapp3.1\Assignment.csproj.CoreCompileInputs.cache
+D:\VTCA\OOP\Assignment\obj\Debug\netcoreapp3.1\Assignment.dll
+D:\VTCA\OOP\Assignment\obj\Debug\netcoreapp3.1\Assignment.pdb
+D:\VTCA\OOP\Assignment\obj\Debug\netcoreapp3.1\Assignment.genruntimeconfig.cache
