@@ -26,16 +26,16 @@ class Student
         get { return idClass; }
         set { idClass = value; }
     }
-    public void update()
+    public void updateStudent()
     {
 
     }
-    public void add()
+    public void addStudent()
     {
 
     }
     public void display()
     {
-        Console.WriteLine("| {0,-7}| {1,-20}| {2,-14}| {3,-12}| {4,-6}|",id,name,address,date,idClass);
+        Console.WriteLine("| {0,-8}| {1,-20}| {2,-14}| {3,-12}| {4,-6}|",id,name,address,date.ToShortDateString(),idClass);
     }
 }

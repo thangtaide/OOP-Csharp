@@ -1,0 +1,13 @@
+D:\VTCA\OOP\Learn\bin\Debug\netcoreapp3.1\Learn.exe
+D:\VTCA\OOP\Learn\bin\Debug\netcoreapp3.1\Learn.deps.json
+D:\VTCA\OOP\Learn\bin\Debug\netcoreapp3.1\Learn.runtimeconfig.json
+D:\VTCA\OOP\Learn\bin\Debug\netcoreapp3.1\Learn.runtimeconfig.dev.json
+D:\VTCA\OOP\Learn\bin\Debug\netcoreapp3.1\Learn.dll
+D:\VTCA\OOP\Learn\bin\Debug\netcoreapp3.1\Learn.pdb
+D:\VTCA\OOP\Learn\obj\Debug\netcoreapp3.1\Learn.csprojAssemblyReference.cache
+D:\VTCA\OOP\Learn\obj\Debug\netcoreapp3.1\Learn.AssemblyInfoInputs.cache
+D:\VTCA\OOP\Learn\obj\Debug\netcoreapp3.1\Learn.AssemblyInfo.cs
+D:\VTCA\OOP\Learn\obj\Debug\netcoreapp3.1\Learn.csproj.CoreCompileInputs.cache
+D:\VTCA\OOP\Learn\obj\Debug\netcoreapp3.1\Learn.dll
+D:\VTCA\OOP\Learn\obj\Debug\netcoreapp3.1\Learn.pdb
+D:\VTCA\OOP\Learn\obj\Debug\netcoreapp3.1\Learn.genruntimeconfig.cache
