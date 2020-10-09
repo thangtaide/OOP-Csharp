@@ -26,6 +26,11 @@ class Student
         get { return idClass; }
         set { idClass = value; }
     }
+    public DateTime Date
+    {
+        get { return date; }
+        set { date = value; }
+    }
     public void updateStudent()
     {
 
@@ -36,6 +41,6 @@ class Student
     }
     public void display()
     {
-        Console.WriteLine("| {0,-8}| {1,-20}| {2,-14}| {3,-12}| {4,-6}|",id,name,address,date.ToShortDateString(),idClass);
+        Console.WriteLine("| {0,-9}| {1,-20}| {2,-16}| {3,-12}| {4,-6}|", id, name, address, date.ToShortDateString(), idClass);
     }
 }

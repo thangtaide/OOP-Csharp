@@ -23,6 +23,6 @@ class Scores
     }
     public void display()
     {
-        Console.WriteLine("| {0,-8}| {1,-20}| {2,-14}| {3,-12}| {4,-6}|",std.ID,std.Name,subject,score,Rate());
+        Console.WriteLine("| {0,-9}| {1,-20}| {2,-16}| {3,-12}| {4,-6}|",std.ID,std.Name,subject,score,Rate());
     }
 }
