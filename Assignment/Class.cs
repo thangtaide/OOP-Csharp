@@ -26,16 +26,9 @@ class Class
         get{return day;}
         set{day = value;}
     }
-    public void updateClass()
-    {
-
-    }
-    public void addClass()
-    {
-
-    }
     public void display()
     {
-        Console.WriteLine("| {0,-8}| {1,-20}| {2,-14}| {3,-12}| {4,-6}|",idClass,description,teacher,time,day);
+        Console.WriteLine("| {0,-8}| {1,-24}| {2,-20}| {3,-16}| {4,-11}|"
+        ,idClass,description,teacher,time,day);
     }
 }

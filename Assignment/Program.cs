@@ -9,74 +9,98 @@ namespace Assignment
             Console.OutputEncoding = System.Text.Encoding.Unicode;
             Console.InputEncoding = System.Text.Encoding.Unicode;
             string choice;
+            Menu m = new Menu();
             StudentsManager std = new StudentsManager();
+            ClassManager cls = new ClassManager();
             do
             {
-                Console.Clear();
-                Console.WriteLine("+---------------------------------------------------------------------+");
-                Console.WriteLine("|                    Chào mừng đến với VTC Academy                    |");
-                Console.WriteLine("+---------------------------------------------------------------------+");
-                Console.WriteLine("| 1. Quản lí danh sách sinh viên                                      |");
-                Console.WriteLine("| 2. Quản lí lớp học                                                  |");
-                Console.WriteLine("| 3. Quản lí điểm thi                                                 |");
-                Console.WriteLine("+---------------------------------------------------------------------+");
-                Console.Write("  Lựa chọn chức năng: ");
+                m.menu();
                 choice = Console.ReadLine();
                 switch (choice)
                 {
                     case "0":
-                        Console.WriteLine("  Exit ...");
+                        Console.WriteLine("\n ...\nChúc các bạn sinh viên học tập tốt!");
                         break;
                     case "1":
-                        string c;
+                        string c1;
                         do
                         {
-                            Console.Clear();
-                            Console.WriteLine("+---------------------------------------------------------------------+");
-                            Console.WriteLine("|                     Quản lí danh sách sinh viên                     |");
-                            Console.WriteLine("+---------------------------------------------------------------------+");
-                            Console.WriteLine("| 1. Xem danh sách sinh viên                                          |");
-                            Console.WriteLine("| 2. Cập nhật thông tin sinh viên                                     |");
-                            Console.WriteLine("| 3. Thêm một sinh viên                                               |");
-                            Console.WriteLine("| 0. Trở về menu chính                                                |");
-                            Console.WriteLine("+---------------------------------------------------------------------+");
-                            Console.Write("  Lựa chọn chức năng: ");
-                            c = Console.ReadLine();
-                            switch (c)
+                            m.CN1();
+                            c1 = Console.ReadLine();
+                            switch (c1)
                             {
                                 case "0":
                                     break;
                                 case "1":
-                                    Console.Clear();
-                                    Console.WriteLine("+----------------------------------------------------------------------+");
-                                    Console.WriteLine("|                         Danh sách sinh viên                          |");
-                                    Console.WriteLine("+----------------------------------------------------------------------+");
-                                    Console.WriteLine("| Mã SV    | Họ và tên           | Địa chỉ         | Ngày Sinh | Lớp   |");
-                                    Console.WriteLine("+----------------------------------------------------------------------+");
-                                    std.display();
-                                    Console.WriteLine("+----------------------------------------------------------------------+");
-                                    Console.Write("Press any key to continue... ");
-                                    Console.ReadKey();
+                                    m.CN11(std);
+                                    m.Press();
                                     break;
                                 case "2":
+                                    m.CN12(std);
                                     break;
                                 case "3":
-                                    Console.Clear();
-                                    Console.WriteLine("===============Thêm mới một sinh viên================");
-                                    std.add();
+                                    m.CN13(std);
                                     break;
                                 default:
-                                    Console.Clear();
-                                    Console.WriteLine("Nhập sai! Mời chọn lại!");
-                                    Console.ReadKey();
+                                    m.ErrorPress();
                                     break;
                             }
-                        } while (c != "0");
+                        } while (c1 != "0");
                         break;
                     case "2":
+                        string c2;
+                        do
+                        {
+                            m.CN2();
+                            c2 = Console.ReadLine();
+                            switch (c2)
+                            {
+                                case "0":
+                                    break;
+                                case "1":
+                                    m.CN21(cls);
+                                    m.Press();
+                                    break;
+                                case "2":
+                                    m.CN22(cls);
+                                    break;
+                                case "3":
+                                    m.CN23(cls);
+                                    m.check(cls,std);
+                                    m.Press();
+                                    break;
+                                default:
+                                    m.ErrorPress();
+                                    break;
+                            }
+                        } while (c2 != "0");
                         break;
                     case "3":
-
+                        string c3;
+                        do
+                        {
+                            m.CN3();
+                            c3 = Console.ReadLine();
+                            switch (c3)
+                            {
+                                case "0":
+                                    break;
+                                case "1":
+                                    m.CN31(std);
+                                    break;
+                                case "2":
+                                    m.CN32(std);
+                                    m.Press();
+                                    break;
+                                case "3":
+                                    m.CN33(std);
+                                    m.Press();
+                                    break;
+                                default:
+                                    m.ErrorPress();
+                                    break;
+                            }
+                        } while (c3 != "0");
                         break;
                     default:
                         Console.Clear();

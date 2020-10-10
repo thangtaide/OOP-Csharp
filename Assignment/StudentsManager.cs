@@ -3,7 +3,7 @@ using System.Collections.Generic;
 class StudentsManager
 {
     List<Student> students = new List<Student>();
-    int count = 0;
+    public int count = 0;
     public void add()
     {
         string yn = "";
@@ -12,8 +12,22 @@ class StudentsManager
             Console.OutputEncoding = System.Text.Encoding.Unicode;
             Console.InputEncoding = System.Text.Encoding.Unicode;
             Student s = new Student();
-            Console.Write("Nhập mã sinh viên: ");
-            s.ID = Console.ReadLine();
+            Boolean check = false;
+            do
+            {
+                Console.Write("Nhập mã sinh viên: ");
+                s.ID = Console.ReadLine();
+                for (int i = 0; i < count; i++)
+                {
+                    if (s.ID.Equals(students[i].ID))
+                    {
+                        Console.WriteLine("Mã sinh viên đã tồn tại! Mời nhập lại.");
+                        check = true;
+                        break;
+                    }
+                    check = false;
+                }
+            } while (check);
             Console.Write("Nhập tên sinh viên: ");
             s.Name = Console.ReadLine();
             Console.Write("Nhập địa chỉ: ");
@@ -43,13 +57,128 @@ class StudentsManager
     }
     public void update()
     {
-
+        string yn = "";
+        do
+        {
+            Console.OutputEncoding = System.Text.Encoding.Unicode;
+            Console.InputEncoding = System.Text.Encoding.Unicode;
+            string s;
+            int i;
+            do
+            {
+                Console.Write("Nhập mã sinh viên: ");
+                s = Console.ReadLine();
+                i = students.FindIndex(x => x.ID == s);
+                if (i == -1) Console.WriteLine("Mã sinh viên không tồn tại. Mời nhập lại !");
+            } while (i == -1);
+            Console.Write("Nhập tên sinh viên: ");
+            students[i].Name = Console.ReadLine();
+            Console.Write("Nhập địa chỉ: ");
+            students[i].Address = Console.ReadLine();
+            Boolean convert = true;
+            do
+            {
+                Console.Write("Nhập ngày sinh: ");
+                string d = Console.ReadLine();
+                convert = DateTime.TryParse(d, out DateTime result);
+                if (convert) students[i].Date = result;
+                else Console.WriteLine("Bạn vừa nhập không phải ngày tháng. Mời nhập lại !\n");
+            } while (!convert);
+            Console.Write("Nhập mã lớp: ");
+            students[i].IDClass = Console.ReadLine();
+            do
+            {
+                Console.Write("Bạn có muốn tiếp tục?(Y/N): ");
+                yn = Console.ReadLine();
+                if (yn.ToLower() != "n" && yn.ToLower() != "y")
+                    Console.WriteLine("Nhập sai! Mời nhập lại!");
+            } while (yn.ToLower() != "n" && yn.ToLower() != "y");
+        } while (yn.ToLower() != "n");
+    }
+    public void addScore()
+    {
+        string yn = "";
+        do
+        {
+            Console.OutputEncoding = System.Text.Encoding.Unicode;
+            Console.InputEncoding = System.Text.Encoding.Unicode;
+            string s;
+            int index=0;
+            do
+            {
+                Console.Write("Nhập mã sinh viên: ");
+                s = Console.ReadLine();
+                index = students.FindIndex(x => x.ID == s);
+                if (index == -1) Console.WriteLine("Mã sinh viên không tồn tại. Mời nhập lại !");
+            } while (index == -1);
+            Console.Write("Nhập môn thi: ");
+            Scores temp = new Scores();
+            temp.Subject = Console.ReadLine();
+            students[index].count++;
+            Boolean convert = true;
+            do
+            {
+                Console.Write("Nhập điểm: ");
+                string d = Console.ReadLine();
+                convert = int.TryParse(d, out int result);
+                if (convert)
+                {
+                    if(result < 0 || result > 20)
+                    {
+                        Console.WriteLine("Bạn vừa nhập số điểm không hợp lệ(điểm phải trong khoảng 0-20). Mời nhập lại !\n");
+                        convert = false;
+                    }
+                    else temp.Score = result;
+                }
+                else Console.WriteLine("Bạn vừa nhập không phải số. Mời nhập lại !\n");
+            } while (!convert);
+            students[index].scr.Add(temp);
+            Console.WriteLine();
+            do
+            {
+                Console.Write("Bạn có muốn tiếp tục?(Y/N): ");
+                yn = Console.ReadLine();
+                if (yn.ToLower() != "n" && yn.ToLower() != "y")
+                    Console.WriteLine("Nhập sai! Mời nhập lại!");
+            } while (yn.ToLower() != "n" && yn.ToLower() != "y");
+        } while (yn.ToLower() != "n");
+    }
+    public void check(ClassManager cls)
+    {   
+        int index;
+        for (int i = 0; i < cls.count; i++)
+        {
+            index = students.FindIndex(x => x.IDClass == cls.idClass(i));
+            if(index == -1) Console.WriteLine("\nWarning ! Học viên {0}, mã sinh viên {1} có lớp {2} chưa được mở"
+             , students[i].Name, students[i].ID, students[i].IDClass);
+        }
     }
     public void display()
     {
         for (int i = 0; i < count; i++)
         {
             students[i].display();
+        }
+    }
+    public void displayByClass(string idClass)
+    {
+        for (int i = 0; i < count; i++)
+        {
+            if(students[i].IDClass == idClass) 
+            for (int j = 0; j < students[i].count; j++)
+            {
+                students[i].displayScore(j);
+            }
+        }
+    }
+    public void displayBySubject(string subject)
+    {
+        for (int i = 0; i < count; i++)
+        {
+            for (int j = 0; j < students[i].count; j++)
+            {
+                if(students[i].scr[j].Subject == subject) students[i].displayScore(j);
+            }
         }
     }
 }

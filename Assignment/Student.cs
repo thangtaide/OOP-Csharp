@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 class Student
 {
     string id;
@@ -6,6 +7,8 @@ class Student
     string address;
     DateTime date;
     string idClass;
+    public List<Scores> scr = new List<Scores>();
+    public int count = 0;
     public string ID
     {
         get { return id; }
@@ -31,16 +34,14 @@ class Student
         get { return date; }
         set { date = value; }
     }
-    public void updateStudent()
-    {
-
-    }
-    public void addStudent()
-    {
-
-    }
     public void display()
     {
-        Console.WriteLine("| {0,-9}| {1,-20}| {2,-16}| {3,-12}| {4,-6}|", id, name, address, date.ToShortDateString(), idClass);
+        Console.WriteLine("| {0,-9}| {1,-21}| {2,-19}| {3,-10}| {4,-6}|"
+        , id, name, address, date.ToShortDateString(), idClass);
+    }
+    public void displayScore(int index)
+    {
+        Console.WriteLine("| {0,-9}| {1,-21}| {2,-10}| {3,-5}| {4,-9}|"
+        , idClass, name, scr[index].Subject, scr[index].Score, scr[index].Rate());
     }
 }
