@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.IO;
 namespace Assignment
 {
     class Program
@@ -12,6 +12,7 @@ namespace Assignment
             Menu m = new Menu();
             StudentsManager std = new StudentsManager();
             ClassManager cls = new ClassManager();
+            
             do
             {
                 m.menu();
@@ -66,7 +67,7 @@ namespace Assignment
                                     break;
                                 case "3":
                                     m.CN23(cls);
-                                    m.check(cls,std);
+                                    m.check(cls, std);
                                     m.Press();
                                     break;
                                 default:
@@ -109,6 +110,7 @@ namespace Assignment
                         break;
                 }
             } while (choice != "0");
+            
         }
     }
 }

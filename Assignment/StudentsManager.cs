@@ -181,4 +181,12 @@ class StudentsManager
             }
         }
     }
+    public Student display(int index)
+    {
+        return students[index];
+    }
+    public void add(Student s)
+    {
+        students.Add(s);
+    }
 }

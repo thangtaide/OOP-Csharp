@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 class Menu
 {
     public void menu()
@@ -189,5 +190,29 @@ class Menu
     public void check(ClassManager cls, StudentsManager std)
     {
         std.check(cls);
+    }
+    public void CreatFile(string name)
+    {
+        using (BinaryWriter writer = new BinaryWriter(File.Open(name, FileMode.Create)))
+        {
+        }
+    }
+    public void ReadFile(string name, ref int count, Object[] obj)
+    {
+
+    }
+    public string ChuanHoa(string str)
+    {
+        str = str.Trim().ToLower();
+        while (str.Contains("  "))
+            str.Replace("  ", " ");
+        string[] arrStr = str.Split(' ');
+        string s = "";
+        foreach (string item in arrStr)
+        {
+            s += item.Substring(0, 1).ToUpper() + item.Substring(1)+ " ";
+
+        }
+        return s.TrimEnd();
     }
 }

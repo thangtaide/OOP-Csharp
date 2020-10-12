@@ -17,7 +17,7 @@ class Student
     public string Name
     {
         get { return name; }
-        set { name = value; }
+        set { name = ChuanHoa(value); }
     }
     public string Address
     {
@@ -43,5 +43,19 @@ class Student
     {
         Console.WriteLine("| {0,-9}| {1,-21}| {2,-10}| {3,-5}| {4,-9}|"
         , idClass, name, scr[index].Subject, scr[index].Score, scr[index].Rate());
+    }
+    public string ChuanHoa(string str)
+    {
+        str = str.Trim().ToLower();
+        while (str.Contains("  "))
+            str.Replace("  ", " ");
+        string[] arrStr = str.Split(' ');
+        string s = "";
+        foreach (string item in arrStr)
+        {
+            s += item.Substring(0, 1).ToUpper() + item.Substring(1)+ " ";
+
+        }
+        return s.TrimEnd();
     }
 }

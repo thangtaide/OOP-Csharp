@@ -92,4 +92,8 @@ class ClassManager
             cls[i].display();
         }
     }
+    public void add(Class c)
+    {
+        cls.Add(c);
+    }
 }
