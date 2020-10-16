@@ -81,10 +81,7 @@ class ClassManager
             } while (yn.ToLower() != "n" && yn.ToLower() != "y");
         } while (yn.ToLower() != "n");
     }
-    public string idClass(int index)
-    {
-        return cls[index].IDClass;
-    }
+    
     public void display()
     {
         for (int i = 0; i < count; i++)
@@ -95,5 +92,23 @@ class ClassManager
     public void add(Class c)
     {
         cls.Add(c);
+    }
+    public Class display(int index)
+    {
+        return cls[index];
+    }
+    public void check(StudentsManager std)
+    {   
+        int index;
+        for (int i = 0; i < std.count; i++)
+        {
+            index = cls.FindIndex(x => x.IDClass == std.idClass(i));
+            if(index == -1) Console.WriteLine("\nWarning ! Học viên {0}, mã sinh viên {1} có lớp {2} chưa được mở"
+             , std.display(i).Name, std.display(i).ID, std.display(i).IDClass);
+        }
+    }
+    public void sort()
+    {
+        cls.Sort((x,y) => x.IDClass.CompareTo(y.IDClass));
     }
 }

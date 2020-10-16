@@ -189,7 +189,7 @@ class Menu
     }
     public void check(ClassManager cls, StudentsManager std)
     {
-        std.check(cls);
+        cls.check(std);
     }
     public void CreatFile(string name)
     {

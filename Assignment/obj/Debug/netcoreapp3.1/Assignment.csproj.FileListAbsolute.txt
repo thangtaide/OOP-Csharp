@@ -11,3 +11,5 @@ D:\VTCA\OOP\Assignment\obj\Debug\netcoreapp3.1\Assignment.csproj.CoreCompileInpu
 D:\VTCA\OOP\Assignment\obj\Debug\netcoreapp3.1\Assignment.dll
 D:\VTCA\OOP\Assignment\obj\Debug\netcoreapp3.1\Assignment.pdb
 D:\VTCA\OOP\Assignment\obj\Debug\netcoreapp3.1\Assignment.genruntimeconfig.cache
+D:\VTCA\OOP\Assignment\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\VTCA\OOP\Assignment\obj\Debug\netcoreapp3.1\Assignment.csproj.CopyComplete
