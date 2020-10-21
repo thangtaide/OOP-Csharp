@@ -5,14 +5,14 @@ class Menu
     public void menu()
     {
         Console.Clear();
-        Console.WriteLine("+---------------------------------------------------------------------+");
-        Console.WriteLine("|                    Chào mừng đến với VTC Academy                    |");
-        Console.WriteLine("+---------------------------------------------------------------------+");
-        Console.WriteLine("| 1. Quản lí danh sách sinh viên                                      |");
-        Console.WriteLine("| 2. Quản lí lớp học                                                  |");
-        Console.WriteLine("| 3. Quản lí điểm thi                                                 |");
-        Console.WriteLine("| 0. Thoát chương trình                                               |");
-        Console.WriteLine("+---------------------------------------------------------------------+");
+        Console.WriteLine("+-----------------------------------------------------+");
+        Console.WriteLine("|             Chào mừng đến với VTC Academy           |");
+        Console.WriteLine("+-----------------------------------------------------+");
+        Console.WriteLine("| 1. Quản lí danh sách sinh viên                      |");
+        Console.WriteLine("| 2. Quản lí lớp học                                  |");
+        Console.WriteLine("| 3. Quản lí điểm thi                                 |");
+        Console.WriteLine("| 0. Thoát chương trình                               |");
+        Console.WriteLine("+-----------------------------------------------------+");
         Console.Write("  Lựa chọn chức năng: ");
     }
     public void CN1()
@@ -20,12 +20,12 @@ class Menu
         Console.Clear();
         Console.WriteLine("+-----------------------------------------------------------+");
         Console.WriteLine("|               Quản lí danh sách sinh viên                 |");
-        Console.WriteLine("+-----------------------------------------------------------+");
-        Console.WriteLine("| 1. Xem danh sách sinh viên                                |");
-        Console.WriteLine("| 2. Cập nhật thông tin sinh viên                           |");
-        Console.WriteLine("| 3. Thêm mới một sinh viên                                 |");
-        Console.WriteLine("| 0. Trở về menu chính                                      |");
-        Console.WriteLine("+-----------------------------------------------------------+");
+        Console.WriteLine("+-----------------------------------------------------+");
+        Console.WriteLine("| 1. Xem danh sách sinh viên                          |");
+        Console.WriteLine("| 2. Cập nhật thông tin sinh viên                     |");
+        Console.WriteLine("| 3. Thêm mới một sinh viên                           |");
+        Console.WriteLine("| 0. Trở về menu chính                                |");
+        Console.WriteLine("+-----------------------------------------------------+");
         Console.Write("  Lựa chọn chức năng: ");
     }
     public void Press()

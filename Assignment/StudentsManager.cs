@@ -64,13 +64,25 @@ class StudentsManager
             Console.InputEncoding = System.Text.Encoding.Unicode;
             string s;
             int i;
+            Boolean check;
             do
             {
                 Console.Write("Nhập mã sinh viên: ");
                 s = Console.ReadLine();
-                i = students.FindIndex(x => x.ID == s);
-                if (i == -1) Console.WriteLine("Mã sinh viên không tồn tại. Mời nhập lại !");
-            } while (i == -1);
+                // i = students.FindIndex(x => x.ID == s);
+                check = false;
+                foreach (Student item in students)
+                {
+                    if(item.ID == s)
+                    {
+                        Console.Write("Nhập tên sinh viên: ");
+                        item.Name = Console.ReadLine();
+                        check = true;
+                        break;
+                    }
+                }
+                if(!check) Console.WriteLine("Mã sinh viên không tồn tại. Mời nhập lại !");
+            } while (!check);
             Console.Write("Nhập tên sinh viên: ");
             students[i].Name = Console.ReadLine();
             Console.Write("Nhập địa chỉ: ");
