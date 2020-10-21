@@ -1,0 +1,16 @@
+D:\VTCA\OOP\ASM\bin\Debug\netcoreapp3.1\ASM.exe
+D:\VTCA\OOP\ASM\bin\Debug\netcoreapp3.1\ASM.deps.json
+D:\VTCA\OOP\ASM\bin\Debug\netcoreapp3.1\ASM.runtimeconfig.json
+D:\VTCA\OOP\ASM\bin\Debug\netcoreapp3.1\ASM.runtimeconfig.dev.json
+D:\VTCA\OOP\ASM\bin\Debug\netcoreapp3.1\ASM.dll
+D:\VTCA\OOP\ASM\bin\Debug\netcoreapp3.1\ASM.pdb
+D:\VTCA\OOP\ASM\bin\Debug\netcoreapp3.1\Json.dll
+D:\VTCA\OOP\ASM\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\VTCA\OOP\ASM\obj\Debug\netcoreapp3.1\ASM.csprojAssemblyReference.cache
+D:\VTCA\OOP\ASM\obj\Debug\netcoreapp3.1\ASM.AssemblyInfoInputs.cache
+D:\VTCA\OOP\ASM\obj\Debug\netcoreapp3.1\ASM.AssemblyInfo.cs
+D:\VTCA\OOP\ASM\obj\Debug\netcoreapp3.1\ASM.csproj.CoreCompileInputs.cache
+D:\VTCA\OOP\ASM\obj\Debug\netcoreapp3.1\ASM.csproj.CopyComplete
+D:\VTCA\OOP\ASM\obj\Debug\netcoreapp3.1\ASM.dll
+D:\VTCA\OOP\ASM\obj\Debug\netcoreapp3.1\ASM.pdb
+D:\VTCA\OOP\ASM\obj\Debug\netcoreapp3.1\ASM.genruntimeconfig.cache

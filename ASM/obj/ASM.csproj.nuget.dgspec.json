@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\VTCA\\OOP\\Assignment\\Assignment.csproj": {}
+    "D:\\VTCA\\OOP\\ASM\\ASM.csproj": {}
   },
   "projects": {
-    "D:\\VTCA\\OOP\\Assignment\\Assignment.csproj": {
+    "D:\\VTCA\\OOP\\ASM\\ASM.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\VTCA\\OOP\\Assignment\\Assignment.csproj",
-        "projectName": "Assignment",
-        "projectPath": "D:\\VTCA\\OOP\\Assignment\\Assignment.csproj",
+        "projectUniqueName": "D:\\VTCA\\OOP\\ASM\\ASM.csproj",
+        "projectName": "ASM",
+        "projectPath": "D:\\VTCA\\OOP\\ASM\\ASM.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\VTCA\\OOP\\Assignment\\obj\\",
+        "outputPath": "D:\\VTCA\\OOP\\ASM\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -36,11 +36,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
-            "ConsoleTables": {
+            "Json": {
               "target": "Package",
-              "version": "[*, )"
+              "version": "[1.0.1, )"
             },
-            "Newtonsoft.json": {
+            "Newtonsoft.Json": {
               "target": "Package",
               "version": "[12.0.3, )"
             }
