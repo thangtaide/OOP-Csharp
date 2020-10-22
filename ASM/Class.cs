@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 class Class
 {
+    method m = new method();
     public Class()
     {
     }
@@ -17,7 +18,7 @@ class Class
     public string Description
     {
         get { return _description; }
-        set { _description = value; }
+        set { _description = m.ChuanHoa(value); }
     }
     private string _teacher;
     public string Teacher

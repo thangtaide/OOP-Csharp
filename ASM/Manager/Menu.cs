@@ -178,7 +178,7 @@ class Menu
                 if (std1 == null) Console.WriteLine("Danh sách trống! Mời nhập thông tin vào.");
                 else
                 {
-                    sb.DisplayByClass(std1);
+                    sb.Display(std1,1);
                 }
                 m.Press();
                 Menu3();
@@ -189,7 +189,7 @@ class Menu
                 if (std2 == null) Console.WriteLine("Danh sách trống! Mời nhập thông tin vào.");
                 else
                 {
-                    sb.DisplayBySubject(std2);
+                    sb.Display(std2,2);
                 }
                 m.Press();
                 Menu3();

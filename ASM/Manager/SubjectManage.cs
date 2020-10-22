@@ -35,7 +35,8 @@ class SubjectManager
                             } while (yn.ToLower() != "n" && yn.ToLower() != "y");
                             if (yn.ToLower() == "y") update = false;
                         }
-                    }else std[index].Scr = new List<Subjects>();
+                    }
+                    else std[index].Scr = new List<Subjects>();
                 } while (c != -1 && update);
                 sub.Subject = s;
                 Boolean convert = true;
@@ -69,34 +70,60 @@ class SubjectManager
         }
         wwf.PushFromFile<Student>("Student.json", std);
     }
-    public void DisplayByClass(List<Student> s)
+    public void Display(List<Student> s, int choice)
     {
         StudentManager std = new StudentManager();
-        Console.WriteLine("=================== Điểm thi theo lớp ====================");
-        Console.Write("  Nhập mã lớp: ");
-        string temp = Console.ReadLine();
-        Console.Clear();
-        Console.WriteLine("+---------------------------------------------------------------+");
-        Console.WriteLine("|                         Danh sách sinh viên                   |");
-        Console.WriteLine("+---------------------------------------------------------------+");
-        Console.WriteLine("| Mã lớp   | Tên sinh viên        | Môn thi   | Điểm | Đánh giá |");
-        Console.WriteLine("+---------------------------------------------------------------+");
-        std.displayByClass(temp, s);
-        Console.WriteLine("+---------------------------------------------------------------+");
+        bool check = true;
+        string temp = "";
+        if (choice == 1)
+        {
+            Console.WriteLine("=================== Điểm thi theo lớp ====================");
+            Console.Write("  Nhập mã lớp: ");
+            temp = Console.ReadLine();
+            check = checkNullClass(s, temp);
+        }
+        else if (choice == 2)
+        {
+            Console.WriteLine("=================== Điểm thi theo môn ====================");
+            Console.Write("  Nhập môn thi: ");
+            temp = Console.ReadLine();
+            check = checkNullSubject(s, temp);
+        }
+        if (check)
+        {
+            Console.Clear();
+            Console.WriteLine("+---------------------------------------------------------------+");
+            Console.WriteLine("|                         Danh sách sinh viên                   |");
+            Console.WriteLine("+---------------------------------------------------------------+");
+            Console.WriteLine("| Mã lớp   | Tên sinh viên        | Môn thi   | Điểm | Đánh giá |");
+            Console.WriteLine("+---------------------------------------------------------------+");
+            if (choice == 1) std.displayByClass(temp, s);
+            else if (choice == 2) std.displayBySubject(temp, s);
+            Console.WriteLine("+---------------------------------------------------------------+");
+        }
+        else
+        {
+            if (choice == 1) Console.WriteLine("\nDanh sách điểm theo lớp vừa nhập trống!\n");
+            else if (choice == 2) Console.WriteLine("\nDanh sách điểm theo môn vừa nhập trống!\n");
+        }
     }
-    public void DisplayBySubject(List<Student> s)
+    public Boolean checkNullSubject(List<Student> s, string text)
     {
-        StudentManager std = new StudentManager();
-        Console.WriteLine("=================== Điểm thi theo môn ====================");
-        Console.Write("  Nhập môn thi: ");
-        string temp = Console.ReadLine();
-        Console.Clear();
-        Console.WriteLine("+---------------------------------------------------------------+");
-        Console.WriteLine("|                         Danh sách sinh viên                   |");
-        Console.WriteLine("+---------------------------------------------------------------+");
-        Console.WriteLine("| Mã lớp   | Tên sinh viên        | Môn thi   | Điểm | Đánh giá |");
-        Console.WriteLine("+---------------------------------------------------------------+");
-        std.displayBySubject(temp, s);
-        Console.WriteLine("+---------------------------------------------------------------+");
+        for (int i = 0; i < s.Count; i++)
+        {
+            if (s[i].Scr != null)
+            {
+                if (s[i].Scr.FindIndex(x => x.Subject == text) != -1) return true;
+            }
+        }
+        return false;
+    }
+    public Boolean checkNullClass(List<Student> s, string text)
+    {
+        for (int i = 0; i < s.Count; i++)
+        {
+            if (s[i].IdClass == text && s[i].Scr != null) return true;
+        }
+        return false;
     }
 }
